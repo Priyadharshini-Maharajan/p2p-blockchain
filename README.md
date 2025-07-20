@@ -81,17 +81,18 @@ Simulate a basic blockchain environment to help students understand core concept
 
 ```bash
 pip install -r requirements.txt
-
+```
 Start your first node on port 5000
 ```bash
 python run_node.py 5000
-
----
+```
 
 Start additional nodes on different ports (in separate terminals)
 ```bash
 python run_node.py 5001
 python run_node.py 5002
+```
+
 ### **2. Open in Browser**
 
 - **Node 1**: [http://127.0.0.1:5000](http://127.0.0.1:5000)  
