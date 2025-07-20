@@ -1,21 +1,27 @@
 # 🚀 P2P Blockchain Network Simulation
 
-This project simulates a peer-to-peer (P2P) blockchain network using **Python**, **Flask**, and a simple web interface.
+This project simulates a peer-to-peer (P2P) blockchain network using **Python**, **Flask**, and a **simple web interface**. It demonstrates the core building blocks of blockchain technology including mining, Proof of Work, transactions, peer syncing, and consensus.
 
 ---
 
 ## 📚 Assignment Objective
 
-Simulate a basic blockchain environment to help students understand core concepts like blocks, mining, transactions, Proof of Work (PoW), consensus, and peer node communication.
+Simulate a basic blockchain environment to help students understand core concepts like:
+
+- Blocks and transactions  
+- Mining and Proof of Work (PoW)  
+- Node registration and discovery  
+- Consensus mechanism  
+- Peer-to-peer communication  
 
 ---
 
 ## ✅ Technologies Used
 
-- Python 3.x  
-- Flask  
-- Requests (for HTTP between nodes)  
-- Bootstrap 5 (for web UI)
+- **Python 3.x**  
+- **Flask** – Web framework  
+- **Requests** – HTTP requests for peer-to-peer communication  
+- **Bootstrap 5** – Responsive UI styling  
 
 ---
 
@@ -23,74 +29,93 @@ Simulate a basic blockchain environment to help students understand core concept
 
 ### ✅ Simple Blockchain Structure
 
-- Blocks contain:
-  - Index
-  - Timestamp
-  - Transactions
-  - Nonce
-  - Previous hash
-- Transactions include sender, recipient, and amount
+- Each block includes:
+  - Index  
+  - Timestamp  
+  - List of transactions  
+  - Nonce  
+  - Previous hash  
+
+- Transactions contain:
+  - Sender  
+  - Recipient  
+  - Amount  
 
 ### ✅ Proof-of-Work Mining
 
-- Each mined block must satisfy a simple hash puzzle (e.g., leading zeros)
-- New transactions are bundled into a block only after mining
+- Blocks are mined using a hash puzzle (e.g., leading zeros).  
+- New transactions are bundled into a block only after successful mining.  
 
-### ✅ Multiple Nodes
+### ✅ Multi-node Simulation
 
-- Each node runs on a different port
-- Maintains its own local copy of the blockchain
+- Each node runs independently on a different port.  
+- Nodes maintain their own local copy of the blockchain.  
 
 ### ✅ Node Registration & Discovery
 
-- Nodes can register peers dynamically
-- Enables network growth
+- Nodes can register new peers dynamically.  
+- Promotes network expansion and decentralization.  
 
 ### ✅ Consensus Algorithm
 
-- Ensures consistency across the network
-- Follows "Longest valid chain wins" rule
+- Ensures consistency across the network.  
+- "Longest valid chain wins" rule applied.  
 
-### ✅ Blockchain Sync
+### ✅ Blockchain Synchronization
 
-- Any node can request sync to align its chain with peers
+- Nodes can sync with others to fetch the most updated valid chain.  
 
 ### ✅ Professional Web UI
 
-- Add transactions via form
-- Trigger mining
-- Register peers
-- Sync chain
-- View blockchain in card layout
+- Add new transactions  
+- Trigger mining  
+- Register peers  
+- Sync the chain  
+- View blockchain blocks in a user-friendly card layout  
 
 ---
 
 ## ▶️ How to Run This Project
 
-### 1. Install Dependencies
+### **1. Install Dependencies and Start the Nodes**
 
 ```bash
 pip install -r requirements.txt
 
-### 2. Run a Node
-Start your first node on port 5000:
-
+Start your first node on port 5000
 ```bash
 python run_node.py 5000
 
-Start more nodes on different ports:
-
+Start additional nodes on different ports (in separate terminals)
 ```bash
-
 python run_node.py 5001
 python run_node.py 5002
 
+### **2. Open in Browser**
 
-### 🌐 Open in Browser
-Node 1: http://127.0.0.1:5000
+- **Node 1**: [http://127.0.0.1:5000](http://127.0.0.1:5000)  
+- **Node 2**: [http://127.0.0.1:5001](http://127.0.0.1:5001)  
+- **Node 3**: [http://127.0.0.1:5002](http://127.0.0.1:5002)
 
-Node 2: http://127.0.0.1:5001
+### **🧭 How to Use**
+➕ Add Transaction
+Fill in:
 
-Node 3: http://127.0.0.1:5002
+Author
 
+Content
 
+Click "Add Transaction"
+
+🔨 Mine a Block
+Click "Mine Block"
+
+Block will be created and added to the chain
+
+🔗 Register Nodes
+Enter peer addresses (e.g., http://127.0.0.1:5001)
+
+Click "Register Peers"
+
+👀 View Blockchain
+Blocks are displayed as cards in the UI
