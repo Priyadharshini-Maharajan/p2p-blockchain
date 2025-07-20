@@ -1,0 +1,26 @@
+<!-- add_transaction.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Transaction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header>
+    <h1>Add New Transaction</h1>
+  </header>
+  <div class="container">
+    <form method="POST">
+        <label>Author:</label>
+        <input type="text" name="author" required>
+
+        <label>Content:</label>
+        <textarea name="content" required></textarea>
+
+        <input type="submit" value="Add Transaction">
+    </form>
+    <a href="/">← Back to Home</a>
+  </div>
+
+</body>
+</html>

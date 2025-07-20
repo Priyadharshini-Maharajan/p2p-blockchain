@@ -1,0 +1,22 @@
+<!-- chain.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blockchain Chain</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header>
+    <h1>Blockchain Chain</h1>
+  </header>
+  <div class="container">
+    {% for block in chain %}
+      <div class="block">
+        <pre>{{ block | tojson(indent=2) }}</pre>
+      </div>
+    {% endfor %}
+    <a href="/">← Back to Home</a>
+  </div>
+
+</body>
+</html>

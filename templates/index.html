@@ -1,0 +1,30 @@
+ <!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blockchain Node</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header>
+    <h1>Blockchain Node</h1>
+  </header>
+  <div class="container">
+    <h2>Welcome!</h2>
+    <ul class="nav">
+      <li><a href="/chain">View Blockchain</a></li>
+      <li><a href="/mine">Mine Block</a></li>
+      <li><a href="/add_transaction">Add Transaction</a></li>
+      <li><a href="/pending_tx">Pending Transactions</a></li>
+      <li><a href="/register_with">Register with Node</a></li>
+    </ul>
+    <h3>Connected Peers:</h3>
+    <ul>
+      {% for peer in peers %}
+        <li>{{ peer }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+
+</body>
+</html>

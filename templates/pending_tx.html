@@ -1,0 +1,24 @@
+<!-- pending_tx.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pending Transactions</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header>
+    <h1>Pending Transactions</h1>
+  </header>
+  <div class="container">
+    {% for tx in transactions %}
+      <div class="transaction">
+        <strong>{{ tx.author }}</strong>: {{ tx.content }}
+      </div>
+    {% else %}
+      <p>No pending transactions.</p>
+    {% endfor %}
+    <a href="/">← Back to Home</a>
+  </div>
+
+</body>
+</html>

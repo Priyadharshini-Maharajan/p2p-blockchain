@@ -1,0 +1,22 @@
+<!-- register_with.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register with Network</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header>
+    <h1>Register with Existing Node</h1>
+  </header>
+  <div class="container">
+    <form method="POST">
+        <label>Node Address (e.g. http://127.0.0.1:5001):</label>
+        <input type="url" name="node_address" required>
+        <input type="submit" value="Register">
+    </form>
+    <a href="/">← Back to Home</a>
+  </div>
+
+</body>
+</html>
